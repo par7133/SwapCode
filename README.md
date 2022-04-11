@@ -7,7 +7,7 @@ SnipSwap is a light, simple, "peer-to-peer" software for swapping snippets of co
 	   
 SnipSwap is released under GPLv3 license, it is supplied AS-IS and we do not take any responsibility for its misusage.<br>
 
-SnipSwap got built behind some cool features like the object drag-n-drop between browser windows, full object serialization and xml.
+SnipSwap got built behind some cool features like object drag-n-drop between browser windows, full object serialization and xml.
 
 First step, use the left side panel password field to create the hashed password to insert in the config file.<br>
 	   
