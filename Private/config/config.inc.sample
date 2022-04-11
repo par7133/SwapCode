@@ -1,0 +1,160 @@
+<?php
+
+/**
+ * Copyright 2021, 2024 5 Mode
+ *
+ * This file is part of SnipSwap.
+ *
+ * SnipSwap is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * SnipSwap is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.  
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with SnipSwap. If not, see <https://www.gnu.org/licenses/>.
+ *
+ * config.inc
+ * 
+ * Configuration settings.
+ *
+ * @author Daniele Bonini <my25mb@aol.com>
+ * @copyrights (c) 2016, 2024, 5 Mode
+  */
+
+define('DEBUG', true);
+define('TESTING', false);
+
+//define('CACHE_HOST', "172.20.0.3");
+//define('CACHE_PORT', "11211");
+//define('CACHE_EXPIRE', 24);
+//define('CACHE_APP_PREFIX', "SS_tosqefv0ct_");
+
+define('APP_NAME', "SnipSwap");
+define('APP_HOST', "yourname-snipwap.com");
+define('APP_PATH', "/var/www/YourWebApp/Public");
+define('APP_SCRIPT_PATH', "/var/www/YourWebApp/Private/scripts");
+define('APP_AJAX_PATH', "/var/www/YourWebApp/Private/scripts_ajax");
+define('APP_ERROR_PATH', "/var/www/YourWebApp/Private/error");
+define('APP_DATA_PATH', "/var/www/YourWebApp/Private/repo");
+define('APP_TEMPLATE_PATH', "/var/www/YourWebApp/Private/templates");
+define('APP_SCRIPTS_WITHOUT_HEADER', "~||");
+define('APP_SCRIPTS_WITHOUT_SEARCH_MENU', "~|err-401|err-404|");
+define('APP_LICENSE', <<<LICENSETEXT
+Copyright 2021, 2024 5 Mode
+
+This file is part of SnipSwap.
+
+SnipSwap is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+SnipSwap is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.  
+ 
+You should have received a copy of the GNU General Public License
+along with SnipSwap. If not, see <https://www.gnu.org/licenses/>.
+LICENSETEXT
+);
+define('APP_DEF_LANG', "en-US");
+define('APP_LOCALE', "EN");
+define('APP_MAX_DFT_NEW_SNIPS', 15);
+
+define('SESSION_NAME', "SS_3445501");
+define('SESSION_TIMEOUT', 1800);
+
+define('BUSINESS_DFT_LABEL', "5 Mode");
+define('BUSINESS_DFT_LINK', "5mode.com");
+define('BUSINESS_DFT_EMAIL', "my25mb@aol.com");
+
+// sha256 password
+// pw: password
+define('EDITOR_PASSWORD', "");
+
+define('SEARCH_WORD_EXCLUSION_LIST_en-US', "~|a|an|of|at|in|on|inside|from|by|to|the|for|with|within|many|much|few|some|any|and|or|how|like|where|what|who|when|which|why|whose|that|this|these|those|about|");
+define('SEARCH_WORD_EXCLUSION_LIST_zh-CN', "~|一个|一双|一只|一本|一台|一块|一堆|一听|一串|一条|一盏|的|在|里|上|从|自|到|为|给|很多|很少|一些|任何|和|或者|怎么样|像|哪里|什么时候|什么|谁|哪个|为什么|谁的|那个|这个|这些|那些|关于|"); 
+define('SEARCH_WORD_EXCLUSION_LIST_es-ES', "~|un|una|uno|de|en|sobre|dentro|desde|del|dela|dele|delo|a|para|el|la|lo|los|las|por|tras|muchos|mucho|unos|unas|como|donde|que|quien|cuando|cual|cuyo|cuya|este|estos|esta|estas|esto|aquel|aquellos|aquella|aquellas|aquello|acerca|");
+define('SEARCH_WORD_EXCLUSION_LIST_it-IT', "~|un|una|uno|di|del|dell|dello|della|delle||degli|dei|a|ad|al|all|allo|alla|alle|agli|ai|in|nel|nello|nella|nelle|nell|negli|nei|su|sul|sullo|sulla|sulle|sugli|sui|dentro|da|dal|dall|dallo|dalla|dalle|dagli|dai|i|il|lo|la|le|gli|con|col|per|via|tra|fra|molti|molto|alcuni|e|ed|o|come|dove|cosa|chi|quando|quale|quali|perche|purche|cui|che|questo|quello|quei|quegli|circa|");
+define('SEARCH_WORD_EXCLUSION_LIST_fr-FR', "~|un|une|de|a|en|dans|sur|dedans|des|depuit|le|la|les|pour|entre|beaucoup|tres|comme|comment|que|qui|quand|quel|quelle|quelles|pourquoi|ce|ces|cet|cette|");
+
+
+$CONFIG = [
+  'DEBUG' => true,
+  'TESTING' => false,
+    
+//  'CACHE' => [
+//      'HOST' => "172.20.0.3",
+//      'PORT' => "11211",
+//      'EXPIRE' => 45,
+//      'APP_PREFIX' => "SS_tosqefv0ct_",
+//      ],
+
+  'APP' => [
+      'NAME' => "SnipSwap",
+      'HOST' => "youname-snipswap.com",
+      'PATH' => "/var/www/YourWebApp/Public",
+      'SCRIPT_PATH' => "/var/www/YourWebApp/Private/scripts",
+      'AJAX_PATH' => "/var/www/YourWebApp/Private/scripts_ajax",
+      'ERROR_PATH' => "/var/www/YourWebApp/Private/error",
+      'DATA_PATH' => "/var/www/YourWebApp/Private/repo",
+      'TEMPLATE_PATH' => "/var/www/YourWebApp/Private/templates",
+      'SCRIPTS_WITHOUT_HEADER' => "~||",
+      'SCRIPTS_WITHOUT_SEARCH_MENU' => "~|err-401|err-404|",
+      'LICENSE' => <<<LICENSETEXT
+Copyright 2021, 2024 5 Mode
+
+This file is part of SnipSwap.
+
+SnipSwap is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+SnipSwap is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.  
+ 
+You should have received a copy of the GNU General Public License
+along with SnipSwap. If not, see <https://www.gnu.org/licenses/>.
+LICENSETEXT
+             ,
+      'DEF_LANG' => "en-US",
+      'LOCALE' => "EN",
+      'MAX_DFT_NEW_SNIPS' => 15
+            ],
+
+  'SESSION' => [  
+      'NAME' => "SS_3445501",  
+      'TIMEOUT' => 1800
+           ],
+
+  'BUSINESS' => [
+      'DFT_LABEL' => "5 Mode",
+      'DFT_LINK' => "5mode.com",
+      'DFT_EMAIL' => "my25mb@aol.com"
+           ],
+    
+  'EDITOR' => [
+      // sha256 password
+      // pw: password
+      'PASSWORD' => ""
+           ],
+    
+  'SEARCH' => [
+      'WORD_EXCLUSION_LIST_en-US' => "~|a|an|of|at|in|on|inside|from|by|to|the|for|with|within|many|much|few|some|any|and|or|how|like|where|what|who|when|which|why|whose|that|this|these|those|about|",
+      'WORD_EXCLUSION_LIST_zh-CN' => "~|一个|一双|一只|一本|一台|一块|一堆|一听|一串|一条|一盏|的|在|里|上|从|自|到|为|给|很多|很少|一些|任何|和|或者|怎么样|像|哪里|什么时候|什么|谁|哪个|为什么|谁的|那个|这个|这些|那些|关于|", 
+      'WORD_EXCLUSION_LIST_es-ES' => "~|un|una|uno|de|en|sobre|dentro|desde|del|dela|dele|delo|a|para|el|la|lo|los|las|por|tras|muchos|mucho|unos|unas|como|donde|que|quien|cuando|cual|cuyo|cuya|este|estos|esta|estas|esto|aquel|aquellos|aquella|aquellas|aquello|acerca|",
+      'WORD_EXCLUSION_LIST_it-IT' => "~|un|una|uno|di|del|dell|dello|della|delle|degli|dei|a|ad|al|all|allo|alla|alle|agli|ai|in|nel|nello|nella|nelle|nell|negli|nei|su|sul|sullo|sulla|sulle|sugli|sui|dentro|da|dal|dall|dallo|dalla|dalle|dagli|dai|i|il|lo|la|le|gli|con|col|per|via|tra|fra|molti|molto|alcuni|e|ed|o|come|dove|cosa|chi|quando|quale|quali|perche|purche|cui|che|questo|quello|quei|quegli|circa|",
+      'WORD_EXCLUSION_LIST_fr-FR' => "~|un|une|de|a|en|dans|sur|dedans|des|depuit|le|la|les|pour|entre|beaucoup|tres|comme|comment|que|qui|quand|quel|quelle|quelles|pourquoi|ce|ces|cet|cette|"
+           ]
+];
+
+
