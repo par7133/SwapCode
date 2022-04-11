@@ -83,16 +83,19 @@ function onDrop(tthis, e) {
 
   //alert(newcube.cats);
   //alert(newcube.cats.indexOf(curcat));
-  bcatfound = false;
-  mycats = " " + newcube.cats + " ";
-  if ((mycats.indexOf(curcat) === -1)) {
-    newcube.cats += " " + curcat;      
-    newcube.xml = updCubeXML(newcube.xml, "cats", newcube.cats);
+  if (curcat!=="*") {
+    bcatfound = false;
+    mycats = " " + newcube.cats + " ";
+    if ((mycats.indexOf(curcat) === -1)) {
+      newcube.cats += " " + curcat;      
+      newcube.xml = updCubeXML(newcube.xml, "cats", newcube.cats);
+    } else {
+      bcatfound = curcat;
+    }  
+    //alert(newcube.cats);
   } else {
-    bcatfound = curcat;
+    bcatfound = true;
   }  
-  //alert(newcube.cats);
-  
   //alert("bfound=" + bfound);
   //alert("bcatfound=" + bcatfound);
   
