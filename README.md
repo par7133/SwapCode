@@ -1,5 +1,5 @@
 # SnipSwap
-Swapping code like burgers? Your p2p, drag-n-drop solution - GPL License
+Swapping code like burgers? Here your p2p, drag-n-drop solution - GPL License
 
 Hello and welcome to SnipSwap!<br>
 	   
