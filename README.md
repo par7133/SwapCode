@@ -1,9 +1,9 @@
 # SnipSwap
-Swapping code like burgers? Your snippet on premise solution to swap code - GPL License
+Swapping code like burgers? Your snippet p2p solution to swap code - GPL License
 
 Hello and welcome to SnipSwap!<br>
 	   
-SnipSwap is a light, simple, "peer-to-peer" software on premise for swapping your snippets of code with others.<br>
+SnipSwap is a light, simple, "peer-to-peer" software for swapping snippets of code with others, by dran-n-drop.<br>
 	   
 SnipSwap is released under GPLv3 license, it is supplied AS-IS and we do not take any responsibility for its misusage.<br>
 	   
