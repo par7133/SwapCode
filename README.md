@@ -17,8 +17,6 @@ As you are going to run SnipSwap in the PHP process context, using a limited web
   <li>Set the MAX_DFT_NEW_SNIP value stating the max number of snippet the app is going to initially create.</li>
   <li>In Public/js/cube-code.js, in mystart class method, check if you are using 'http' or 'https'.</li>	   
 </ol>
-	   
-<br>	
      
 Hope you can enjoy it and let us know about any feedback: <a href="mailto:info@snipswap.org" style="color:#e6d236;">info@snipswap.org</a>
 	   
