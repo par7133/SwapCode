@@ -72,7 +72,7 @@ Page::clearJSBuffer();
       $pageDescription = "Swapping code like burgers..";
     }
   ?>  
-  <meta name="description" content="<?php echo $pageDescription; ?>"/>
+	<meta name="description" content="<?php echo $pageDescription; ?>"/>
   <?php 
     $customKeywords = "";
     $pageKeywords = $pageTitle . PHP_SPACE . strtolower(str_replace(".", PHP_STR, $pageDescription)) . PHP_SPACE . $customKeywords . PHP_SPACE . APP_NAME;
@@ -120,8 +120,8 @@ Page::clearJSBuffer();
     <img src="/res/code.png" style="width:310px;">
 </div>
 
-  <div class="header2" style="margin-top:18px; margin-bottom:18px; color:#000000; display:none;">
-    &nbsp;&nbsp;<a href="http://snipswap.org" target="_self" style=" text-decoration: none;"><img src="/res/code.png" style="width:25px;">&nbsp;SnipSwap</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/par7133/SnipSwap" style=""><span style="">on</span> github</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:info@snipswap.org" style=""><span style="">for</span> feedback</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+39-331-4029415" style="font-size:13px;background-color:#15c60b;border:2px solid #15c60b;color:#000000;height:27px;text-decoration:none;">&nbsp;&nbsp;get support&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;<input type="password" id="Password" name="Password" placeholder="new password" style="font-size:11px;">&nbsp;&nbsp;<a href="#" onclick="showEncodedPassword();" style="position:relative; left:0px; top:0px; font-size:13px; font-weight:900; color:green;"><?php echo(getResource("Hash Me", $curLocale));?>!</a>
+  <div class="header2" style="margin-top:18px; margin-left:38px; margin-bottom:18px; color:#000000; display:none;">
+    &nbsp;&nbsp;<a href="http://snipswap.org" target="_self" style=" text-decoration: none;"><img src="/res/code.png" style="width:25px;">&nbsp;SnipSwap</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/par7133/SnipSwap" style=""><span style="">on</span> github</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:info@snipswap.org" style=""><span style="">for</span> feedback</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+39-331-4029415" style="font-size:13px;background-color:#15c60b;border:2px solid #15c60b;color:#000000;height:27px;text-decoration:none;">&nbsp;&nbsp;get support&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;<span class="myxs"><input type="password" id="Password" name="Password" placeholder="new password" style="font-size:11px;">&nbsp;&nbsp;<a href="#" onclick="showEncodedPassword();" style="position:relative; left:0px; top:0px; font-size:13px; font-weight:900; color:green;"><?php echo(getResource("Hash Me", $curLocale));?>!</a><span>
  </div>     
      
   <div class="body-area">
