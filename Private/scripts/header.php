@@ -69,10 +69,10 @@ Page::clearJSBuffer();
     if (defined("PAGE_DESCRIPTION")) {
       $pageDescription = PAGE_DESCRIPTION;
     } else {  
-      $pageDescription = "The 404 error's place.";
+      $pageDescription = "Swapping code like burgers..";
     }
   ?>  
-	<meta name="description" content="<?php echo $pageDescription; ?>"/>
+  <meta name="description" content="<?php echo $pageDescription; ?>"/>
   <?php 
     $customKeywords = "";
     $pageKeywords = $pageTitle . PHP_SPACE . strtolower(str_replace(".", PHP_STR, $pageDescription)) . PHP_SPACE . $customKeywords . PHP_SPACE . APP_NAME;
