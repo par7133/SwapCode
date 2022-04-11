@@ -1,0 +1,241 @@
+/**
+ * Copyright 2021, 2024 5 Mode
+ *
+ * This file is part of SnipSwap.
+ *
+ * SnipSwap is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * SnipSwap is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.  
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with SnipSwap. If not, see <https://www.gnu.org/licenses/>.
+ *
+ * style.css
+ * 
+ * CSS file.
+ *
+ * @author Daniele Bonini <my25mb@aol.com>
+ * @copyrights (c) 2016, 2024, the Open Gallery's contributors     
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap');
+
+html {
+  height: 100%;
+}
+body {
+  margin: 0px; 
+  padding: 0px;
+  height:100%; 
+  font-family: helvetica neue,helvetica,arial,sans-serif;
+  background-color: #FFFFFF;
+}
+.body-area {
+  width: 100%;
+  height: 100%;
+}
+.burger-menu {
+  background: url('../res/burger-menu2.png') no-repeat;
+  background-size: contain;
+}
+.burgermenu-footer-ctrl {
+  padding:10px; 
+  color: white; 
+  float:left;
+  background: #333333;
+  font-size: 12px;
+  font-weight: 400;
+}
+.burgermenu-footer-separetor {
+  padding:10px;
+  padding-left:30px;
+  color: #333333; 
+  float:left;
+  background: #333333;
+  font-size: 12px;
+}
+/*.burgermenu-footer-ctrl:hover {
+  background: #54595D;
+  cursor: pointer;
+}*/
+.burgermenu-row {
+  border-left: 3px solid #444444;
+  color: white; 
+  width: 100%; 
+  font-size: 16px; 
+  padding: 12px; 
+  vertical-align: middle;
+  background: #444444;
+}    
+.burgermenu-row:hover {
+  border-left: 3px solid #66AFE9;
+  background: #54595D;
+  cursor: pointer;
+}
+#appMenuIco {
+  float:left; 
+  position:relative; 
+  top:1px; 
+  left:-20px;
+  cursor: pointer; 
+}
+.appMenu {
+  float:left; 
+  position:relative; 
+  width: 150px; 
+  top:+43px; 
+  left:+22px; 
+  background:#313431; 
+  cursor: pointer; 
+}
+.cat-div{
+  width:100px;
+  float:left;
+  background-color: #f5e79e; 
+  padding:5px;
+  margin:5px;
+  text-align:center;
+  border: 1px solid transparent;
+}
+.cat-div:hover {
+  background-color: burlywood;
+  border: 1px solid orange;
+}
+.col-burger-menu-icon {
+  width: 40px; 
+}
+.col-strd {
+  float: none; 
+}
+.container-box { 
+  position: absolute; 
+  background: #333333;
+  top: 0px;
+  right: 0px;  
+  z-index: 29999; 
+  display: none; 
+  width: 100%; 
+  height: 100%;
+}
+.emptyfield{
+  border: 1px solid red;
+}
+#footerCont {
+  position: fixed; 
+  top: 2000px; 
+  left:-10px;
+  width: 102%; 
+  border: 1px solid #C2DBF2; 
+  padding: 7px; 
+  background: gray; 
+  opacity: 0.3;
+  color:white; 
+  font-family: Sans;
+  font-size: 12px; 
+  text-align: center; 
+  z-index: 99998;
+}
+#footer {
+  position: fixed;
+  float: right;
+  top: 2000px; 
+  left:-10px;
+  width: 100%; 
+  border: 0px solid #C2DBF2; 
+  padding: 7px; 
+  opacity: 1.0;
+  color:black; 
+  font-family: Sans;
+  font-size: 12px; 
+  font-weight: 400;
+  text-align: right; 
+  z-index: 99999;
+}
+.form-control:focus {
+  background: white;
+  border: 1px solid #e8e8e7;  
+} 
+.glyphicon-std {
+  color: #CCD1D3;
+}
+.header {
+  width: 100%; 
+/* height: 228px; */
+  background: #EEEEEE;
+  /*#EAECF0;*/
+  padding-top: 2px;
+}
+.header-table {
+  position: relative; 
+  left: -5px; 
+  top:10px; 
+  width: 100%;
+}
+.input-search {
+  height: 35px; 
+  font-size: 15px;
+  border: 1px solid #C2DBF2;
+  width: 300px;
+}
+.link-div {
+  border: 1px solid white;
+}
+.link-div:hover {
+  background-color: burlywood;
+  border: 1px solid orange;
+}
+.navbar-brand-nml {
+  color: #ababab;
+  background: #e2e2e2;
+  position:relative;
+  top: 0px; 
+  /*font-size: 18px;*/
+  font-weight: 200;
+  display: table-cell;
+  /*
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 7px;
+  padding-bottom: 2px; */
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  left: 0px;
+}
+.navbar-brand-nml-home {
+  color: #3366CC;
+  position:relative;
+  top: -4px; 
+  font-size: 33px; 
+  display: table-cell;
+  padding-right: 0px
+}
+.navbar-brand-nml:hover{
+  color: white;
+  background: #C9CED2; /*#0D62AA;*/
+} 
+.navbar-brand-nml:focus{
+  color: white;
+  background: #0D62AA;
+} 
+.navbar-brand-nml-home:hover{
+  color: black;
+}
+.navbar-brand-nml:focus{
+  color: black;
+} 
+.navbar-brand-nml-home:focus{
+  color: black;
+}
+.separetorBurgerMenu {
+  padding: 0px; 
+  margin: 0px; 
+  border-color: #666666;
+}

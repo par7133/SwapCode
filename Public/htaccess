@@ -1,0 +1,16 @@
+Options -MultiViews
+
+RewriteEngine On
+
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Bootstrap
+RewriteRule "^([d|m])/(.+)?q=(.+)" "/index.php?platform=$1&cat=$2&q=$3" [QSA,L]
+RewriteRule "^([d|m])/(.+)" "/index.php?platform=$1&cat=$2" [QSA,L]
+
+RewriteRule "^(.+\.(jpg|png|gif|js|css|eot|svg|ttf|woff|woff2|ico))$" "$1" [QSA,L]
+RewriteRule "^()$" "/index.php?platform=d&cat=*&splash=1" [QSA,L]
+RewriteRule "^(.+)" "/index.php?url=$1" [QSA,L]
