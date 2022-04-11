@@ -1,5 +1,5 @@
 # SnipSwap
-Swapping code like burgers. A snippet swapping tool, an on premise solution - GPL License
+Swapping code like burgers? Your snippet on premise solution to swap code - GPL License
 
 Hello and welcome to SnipSwap!<br>
 	   
