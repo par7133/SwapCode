@@ -6,7 +6,9 @@ Hello and welcome to SnipSwap!<br>
 SnipSwap is a light, simple, "peer-to-peer" software for swapping snippets of code with others, by dran-n-drop.<br>
 	   
 SnipSwap is released under GPLv3 license, it is supplied AS-IS and we do not take any responsibility for its misusage.<br>
-	   
+
+SnipSwap got built behind some cool features like the object drag-n-drop between browser windows, full object serialization and xml.
+
 First step, use the left side panel password field to create the hashed password to insert in the config file.<br>
 	   
 As you are going to run SnipSwap in the PHP process context, using a limited web server or phpfpm user, you must follow some simple directives for an optimal first setup:<br>
