@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<details>
+  <detail face="snippet">
+    <title></title>
+    <desc></desc>
+    <code><![CDATA[]]></code>
+    <tags></tags>
+    <cats></cats>
+  </detail>
+  <detail face="contacts">
+    <label></label> 
+    <link></link> 
+    <email></email>
+  </detail>  
+  <detail face="other info">
+    <guid></guid>
+  </detail>  
+  <detail face="password">
+    <password></password>
+  </detail>
+</details>
