@@ -22,3 +22,6 @@ As you are going to run SnipSwap in the PHP process context, using a limited web
      
 Hope you can enjoy it and let us know about any feedback: <a href="mailto:info@snipswap.org" style="color:#e6d236;">info@snipswap.org</a>
 	   
+###Screenshots:
+
+![SnipSwap in action](/Public/res/Screenshot1.jpg)<br>
