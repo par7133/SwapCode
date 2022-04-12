@@ -145,10 +145,10 @@ function onDrop(tthis, e) {
     // I insert the the new snip in the GUI.. 
     
     newCube = "";
-    newCube += "<div class='link-div' style='width:250px; float:left; padding: 10px; margin:5px;' title='" + newcube.desc + "' order='" + n + "' onclick='selCube(this);openDetail()' draggable='true' ondragstart='onDragStart(this, event);' onmouseover='onMouseOver();'>";
-    newCube += "<div style='color:#ed6a43; padding-bottom:8px;'>" + newcube.title + "</div>";
-    newCube += "<a href='#'><img src='/res/code.png' style='width:232px; height:124px; border:1px solid darkgray;' alt='" + newcube.title + "'></a><br>";
-    newCube += "&nbsp;<a style='font-style:italic; color:green; font-size:10px; padding-top:5px;' href='http://" + newcube.link.replace(/~/g, "/") + "'>" + newcube.label.replace(/~/g, "/") + "</a><br>";
+    newCube += "<div class='link-div' title='" + newcube.desc + "' order='" + n + "' onclick='selCube(this);openDetail()' draggable='true' ondragstart='onDragStart(this, event);' onmouseover='onMouseOver();'>";
+    newCube += "<div class='link-title'>" + newcube.title + "</div>";
+    newCube += "<a href='#'><img class='link-img' src='/res/code.png' alt='" + newcube.title + "'></a><br>";
+    newCube += "&nbsp;<a class='link-link' href='http://" + newcube.link.replace(/~/g, "/") + "'>" + newcube.label.replace(/~/g, "/") + "</a><br>";
     newCube += "</div>";
     
     oldHtml = $(tthis).html();
