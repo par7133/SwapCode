@@ -58,7 +58,7 @@ $curLocale = APP_LOCALE;
 
 <?php require APP_SCRIPT_PATH . "/header.php";?>
 
-<div id="linkContainer" style="margin-top:3%;margin-left:5%;margin-bottom:3%;margin-right:5%;min-height:400px;border:0px solid red;" cat="<?PHP echo($catMaskedPath);?>" ondragover="onDragOver(event);" ondrop="onDrop(this, event);">
+<div id="linkContainer" cat="<?PHP echo($catMaskedPath);?>" ondragover="onDragOver(event);" ondrop="onDrop(this, event);">
 <?php 
   //echo($q."=q***"); 
   //echo($catMaskedPath."=cat***"); 
@@ -91,10 +91,10 @@ $curLocale = APP_LOCALE;
     
     ?>
     
-                     <div class="link-div" style="width:250px; float:left; padding: 10px; margin:5px;" title="<?php echo($aLink['desc']); ?>" order="<?PHP echo($order);?>" onclick="selCube(this);openDetail()" draggable="true" ondragstart="onDragStart(this, event);" onmouseover="onMouseOver();">
-                           <div style="color:#ed6a43; padding-bottom:8px;"><?php echo($aLink['title']); ?></div>
-                           <a href="#"><img src="/res/code.png" style="width:232px; height:124px; border:1px solid darkgray;" alt="<?php echo($aLink['title']); ?>"></a><br>
-                           &nbsp;<a style="font-style:italic; color:green; font-size:10px; padding-top:5px;" href="http://<?php echo(str_replace(PHP_TILDE, PHP_SLASH, $aLink['link']));?>"><?php echo_label(str_replace(PHP_TILDE, PHP_SLASH, $aLink['label']));?></a><br>
+                     <div class="link-div" title="<?php echo($aLink['desc']); ?>" order="<?PHP echo($order);?>" onclick="selCube(this);openDetail()" draggable="true" ondragstart="onDragStart(this, event);" onmouseover="onMouseOver();">
+                           <div class="link-title"><?php echo($aLink['title']); ?></div>
+                           <a href="#"><img class="link-img" src="/res/code.png" alt="<?php echo($aLink['title']); ?>"></a><br>
+                           &nbsp;<a class="link-link" href="http://<?php echo(str_replace(PHP_TILDE, PHP_SLASH, $aLink['link']));?>"><?php echo_label(str_replace(PHP_TILDE, PHP_SLASH, $aLink['label']));?></a><br>
                      </div>
  
       <?php 
@@ -111,45 +111,50 @@ $curLocale = APP_LOCALE;
   
 </div>
 
+<div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
 <?PHP echo("<script>$myCubeInitjs</script>"); ?>
 
                     <button id="modalButton1" type="button" class="btn btn-primary" style="display:none;" data-toggle="modal" data-target="#modal1">Button #1</button>
 
                     <div class="modal" tabindex="-1" role="dialog" id="modal1">
-                      <div class="modal-dialog modal-lg" role="document" style="width:80%;background-color:#FFFFFF;">
-                        <div class="modal-content" style="float:left;width:90%; height:90%;">
+                      <div class="modal-dialog modal-lg my-modal-dialog" role="document">
+                        <div class="modal-content my-modal-content">
                           <img src="/res/code.png" style="width:98%; vertical-align:top; opacity:0.2"></a>
                           <div style="position:absolute; top:10px; padding:50px;">
                              <table style="width:100%">
                               <tr>  
-                                <td style="width:100px;text-align:right;padding:10px;font-weight:900;">Title:&nbsp;</td><td width="700px"><input id="snip-detail-title" name="txtTitle" type="text" value="" style="width:98%;max-width:550px;font-weight:900;font-size:15px;border:2px solid #000000;" onkeyup="storeData(this)" readonly></td>
+                                <td class="snip-detail-cell">Title:&nbsp;</td><td width="700px"><input class="snip-detail-field" id="snip-detail-title" name="txtTitle" type="text" value="" onkeyup="storeData(this)" readonly></td>
                              </tr>
                              <tr>  
-                                <td style="width:100px;text-align:right;padding:10px;font-weight:900;">Description:&nbsp;</td><td width="700px"><input id="snip-detail-desc" name="txtDesc" type="text" value="" style="width:98%;max-width:550px;font-weight:900;font-size:15px;border:2px solid #000000;" onkeyup="storeData(this)" readonly></td>
+                                <td class="snip-detail-cell">Description:&nbsp;</td><td width="700px"><input class="snip-detail-field" id="snip-detail-desc" name="txtDesc" type="text" value="" onkeyup="storeData(this)" readonly></td>
                              </tr>
                              <tr>
-                                <td style="width:100px;text-align:right;padding:10px;font-weight:900;">Code:&nbsp;</td><td width="700px"><textarea id="snip-detail-code" class="snip-code" name="txtCode" style="width:98%;max-width:750px;height:350px;max-height:350px;font-weight:900;font-size:15px;border:2px solid #000000;" onkeyup="storeData(this)" readonly></textarea></td>
+                                <td class="snip-detail-cell">Code:&nbsp;</td><td width="700px"><textarea class="snip-detail-field snip-code" id="snip-detail-code" name="txtCode" style="max-width:750px;height:350px;max-height:350px;" onkeyup="storeData(this)" readonly></textarea></td>
                               </tr>
                              <tr>
-                                <td style="width:100px;text-align:right;padding:10px;font-weight:900;">Tags:&nbsp;</td><td width="700px"><input id="snip-detail-tags" name="txtTags" type="text" value="" style="width:98%;max-width:550px;font-weight:900;font-size:15px;border:2px solid #000000;" onkeyup="storeData(this)" readonly></td>
+                                <td class="snip-detail-cell">Tags:&nbsp;</td><td width="700px"><input class="snip-detail-field" id="snip-detail-tags" name="txtTags" type="text" value="" onkeyup="storeData(this)" readonly></td>
                               </tr>
                               <tr>  
-                                <td style="width:100px;text-align:right;padding:10px;font-weight:900;">Label (link):&nbsp;</td><td width="700px"><input id="snip-detail-label" name="txtLabel" type="text" value="" style="width:98%;max-width:550px;font-weight:900;font-size:15px;border:2px solid #000000;" onkeyup="storeData(this)" readonly></td>
+                                <td class="snip-detail-cell">Label (link):&nbsp;</td><td width="700px"><input class="snip-detail-field" id="snip-detail-label" name="txtLabel" type="text" value="" onkeyup="storeData(this)" readonly></td>
                              </tr>
                               <tr>  
-                                <td style="width:100px;text-align:right;padding:10px;font-weight:900;">Link:&nbsp;</td><td width="700px"><input id="snip-detail-link" name="txtLink" type="text" value="" style="width:98%;max-width:550px;font-weight:900;font-size:15px;border:2px solid #000000;" onkeyup="storeData(this)" readonly></td>
+                                <td class="snip-detail-cell">Link:&nbsp;</td><td width="700px"><input class="snip-detail-field" id="snip-detail-link" name="txtLink" type="text" value="" onkeyup="storeData(this)" readonly></td>
                              </tr>
                               <tr>  
-                                <td style="width:100px;text-align:right;padding:10px;font-weight:900;">Email:&nbsp;</td><td width="700px"><input id="snip-detail-email" name="txtEmail" type="text" value="" style="width:98%;max-width:550px;font-weight:900;font-size:15px;border:2px solid #000000;" onkeyup="storeData(this)" readonly></td>
+                                <td class="snip-detail-cell">Email:&nbsp;</td><td width="700px"><input class="snip-detail-field" id="snip-detail-email" name="txtEmail" type="text" value="" onkeyup="storeData(this)" readonly></td>
                              </tr>
                              <tr>
-                                <td style="width:100px;text-align:right;padding:10px;font-weight:900;">Cats:&nbsp;</td><td width="700px" style="padding-top:8px;font-weight:900;"><input id="snip-detail-cats" name="txtCats" type="text" value="" style="width:98%;max-width:550px;font-weight:900;font-size:15px;border:2px solid #000000;" onkeyup="storeData(this)" readonly><br><span style="font-size:10px;border-top:8px solid transparent;">space separated snip categories, "~" for subcategories.</span></td>
+                                <td class="snip-detail-cell">Cats:&nbsp;</td><td width="700px" style="padding-top:8px;font-weight:900;"><input class="snip-detail-field" id="snip-detail-cats" name="txtCats" type="text" value="" onkeyup="storeData(this)" readonly><br><span style="font-size:10px;border-top:8px solid transparent;">space separated snip categories, "~" for subcategories.</span></td>
                               </tr>
                               <tr style="display: none;">
-                                <td style="width:100px;text-align:right;padding:10px;font-weight:900;">Guid:&nbsp;</td><td width="700px"><input id="snip-detail-guid" name="txtGuid" type="text" value="" style="width:98%;max-width:550px;font-weight:900;font-size:15px;border:2px solid #000000;" readonly></td>
+                                <td class="snip-detail-cell">Guid:&nbsp;</td><td width="700px"><input class="snip-detail-field" id="snip-detail-guid" name="txtGuid" type="text" value="" readonly></td>
                               </tr>
                               <tr>
-                                <td style="width:100px;text-align:right;padding:10px;font-weight:900;">Password:&nbsp;</td><td width="700px"><input id="snip-detail-password" name="txtPassword" type="text" value="" style="width:98%;max-width:550px;font-weight:900;font-size:15px;border:2px solid #000000;" onkeyup="checkPwd(this)"></td>
+                                <td class="snip-detail-cell">Password:&nbsp;</td><td width="700px"><input class="snip-detail-field" id="snip-detail-password" name="txtPassword" type="text" value="" onkeyup="checkPwd(this)"></td>
                               </tr>
                              </table>
                              <input type="hidden" id="comp-pwd" value="">
