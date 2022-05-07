@@ -209,6 +209,7 @@ final class LinkUtil
         $thumb = PHP_STR;
         $image = PHP_STR;
         $code = PHP_STR;
+        $beauty = PHP_STR;
         $guid = PHP_STR;
         
         $ipos = mb_stripos($path, PHP_SLASH, 2);
@@ -317,6 +318,16 @@ final class LinkUtil
           }
         }         
 
+        //beauty
+        $pattern = $basedir . PHP_SLASH . "data". PHP_SLASH . "beauty" . PHP_SLASH . "*";
+        $aBeautyPaths = array_slice(glob($pattern), 0, 1);
+        if (!Empty($aBeautyPaths)) {
+          $beautyPath = $aBeautyPaths[0];
+          $ipos = strripos($beautyPath, PHP_SLASH);
+          $beauty = substr($beautyPath, $ipos+1);
+          $iFields++;
+        }         
+        
         //guid
         $pattern = $basedir . PHP_SLASH . "data". PHP_SLASH . "guid" . PHP_SLASH . "*";
         $aGuidPaths = array_slice(glob($pattern), 0, 1);
@@ -344,10 +355,10 @@ final class LinkUtil
           }
         }  
         
-        if ($iFields===11) {
+        if ($iFields===12) {
           //for ($i=0;$i<=50;$i++) {
             if (!array_key_exists($name, $reta)) {
-              $reta[$name] = ['name' => $name, 'title' => $title, 'desc' => $desc, 'label' => $label, 'link' => $link, 'thumb' => $thumb, 'image' => $image, 'code' => $code, 'tags' => $tags, 'guid' => $guid, 'cats' => $cats];
+              $reta[$name] = ['name' => $name, 'title' => $title, 'desc' => $desc, 'label' => $label, 'link' => $link, 'thumb' => $thumb, 'image' => $image, 'code' => $code, 'tags' => $tags, 'beauty' => $beauty, 'guid' => $guid, 'cats' => $cats];
               $iresults++;
             }  
           //}  
