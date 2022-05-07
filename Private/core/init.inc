@@ -93,6 +93,7 @@ if (count($aPaths) <= 1 ) {
       $newLabel = BUSINESS_DFT_LABEL;
       $newLink = BUSINESS_DFT_LINK;
       $newEmail = BUSINESS_DFT_EMAIL;
+      $newBeauty = "0";
       $newGuid = mb_substr(hash("sha256", mt_rand() . mt_rand() . APP_SALT, false), 0, 32);
       $newPassword = EDITOR_PASSWORD; 
       
@@ -110,6 +111,7 @@ if (count($aPaths) <= 1 ) {
       $xmlStr = str_replace("<label></label>", "<label>" . $newLabel . "</label>", $xmlStr);
       $xmlStr = str_replace("<link></link>", "<link>" . $newLink . "</link>", $xmlStr);
       $xmlStr = str_replace("<email></email>", "<email>" . $newEmail . "</email>", $xmlStr);
+      $xmlStr = str_replace("<beauty></beauty>", "<beauty>" . $newBeauty . "</beauty>", $xmlStr);
       $xmlStr = str_replace("<guid></guid>", "<guid>" . $newGuid . "</guid>", $xmlStr);
       $xmlStr = str_replace("<password></password>", "<password>" . $newPassword . "</password>", $xmlStr);
       
@@ -132,6 +134,7 @@ if (count($aPaths) <= 1 ) {
       mkdir(APP_DATA_PATH . PHP_SLASH . $baseName. PHP_SLASH . "data". PHP_SLASH . "label");
       mkdir(APP_DATA_PATH . PHP_SLASH . $baseName. PHP_SLASH . "data". PHP_SLASH . "link");
       mkdir(APP_DATA_PATH . PHP_SLASH . $baseName. PHP_SLASH . "data". PHP_SLASH . "email");
+      mkdir(APP_DATA_PATH . PHP_SLASH . $baseName. PHP_SLASH . "data". PHP_SLASH . "beauty");
       mkdir(APP_DATA_PATH . PHP_SLASH . $baseName. PHP_SLASH . "data". PHP_SLASH . "guid");
       mkdir(APP_DATA_PATH . PHP_SLASH . $baseName. PHP_SLASH . "data". PHP_SLASH . "password");
     //}      
@@ -147,6 +150,7 @@ if (count($aPaths) <= 1 ) {
     storeFSData($details, $baseName, "label");
     storeFSData($details, $baseName, "link");
     storeFSData($details, $baseName, "email");
+    storeFSData($details, $baseName, "beauty");
     storeFSData($details, $baseName, "guid");
     storeFSData($details, $baseName, "password");
       
