@@ -89,12 +89,21 @@ $curLocale = APP_LOCALE;
       $order++;
     }
     
+    $serverName = $_SERVER['SERVER_NAME'];
+    $relPath = "/#" . $aLink['title'];
+    
     ?>
     
-                     <div class="link-div" title="<?php echo($aLink['desc']); ?>" order="<?PHP echo($order);?>" onclick="selCube(this);openDetail()" draggable="true" ondragstart="onDragStart(this, event);" onmouseover="onMouseOver();">
-                           <div class="link-title"><?php echo($aLink['title']); ?></div>
+                     <div id="<?php echo($aLink['title']);?>" class="link-div" title="<?php echo($aLink['desc']); ?>" order="<?PHP echo($order);?>" onclick="selCube(this);openDetail()" draggable="true" ondragstart="onDragStart(this, event);" onmouseover="onMouseOver();">
+                           <div class="link-title"><?php echo($aLink['title']); ?><div style="width:25px; float:right;" title="It's a beauty!"><a href="#" onclick="event.stopPropagation();selCube($(this).parent().parent().parent());storeBeauty('imgheart<?php echo($aLink['title']);?>');"><img id="imgheart<?php echo($aLink['title']);?>" src="/res/<?PHP echo(($aLink['beauty']==="0")?"un":"");?>heart.png" style="height:23px;"></a></div></div>
                            <a href="#"><img class="link-img" src="/res/code.png" alt="<?php echo($aLink['title']); ?>"></a><br>
+                           <br>
                            &nbsp;<a class="link-link" href="http://<?php echo(str_replace(PHP_TILDE, PHP_SLASH, $aLink['link']));?>"><?php echo_label(str_replace(PHP_TILDE, PHP_SLASH, $aLink['label']));?></a><br>
+                           <div style="position:relative;top:-25px;left:-2px;text-align:right;padding-right:1.5px;">
+                             <a href="https://www.facebook.com/sharer/sharer.php?u=http://<?PHP echo("{$serverName}{$relPath}");?>&t=" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" title="Share on Facebook"><img src="/res/fb.png"></a>
+                             <a href="https://twitter.com/share?url=http://<?PHP echo("{$serverName}{$relPath}");?>&text=" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" title="Share on Twitter"><img src="/res/twitter.png"></a>
+                             <a href="whatsapp://send?text=http://<?PHP echo("{$serverName}{$relPath}");?>" data-action="share/whatsapp/share" onClick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" title="Share on whatsapp"><img src="/res/whatsapp.png"></a>
+                           </div>
                      </div>
  
       <?php 
@@ -278,6 +287,8 @@ $curLocale = APP_LOCALE;
           document.getElementById("snip-detail-" + x[0].childNodes[i].nodeName).innerHTML = htmlEncode(x[0].childNodes[i].textContent);
         } else if (x[0].childNodes[i].nodeName === "password") {
           document.getElementById("comp-pwd").value = htmlEncode(x[0].childNodes[i].textContent);
+        } else if (x[0].childNodes[i].nodeName === "beauty") {
+          // none  
         } else {
           //alert(x[0].childNodes[i].nodeName);
           document.getElementById("snip-detail-" + x[0].childNodes[i].nodeName).value = x[0].childNodes[i].textContent;
@@ -349,6 +360,23 @@ $curLocale = APP_LOCALE;
 
     dataChanged = true;
   }
+
+
+  function storeBeauty(beautyImageId) {
+
+    var xmlStr = curcube.getxml();
+    var beautyNewVal = "1";
+    re = /(\<beauty>).*(\<\/beauty>)/gs;
+    xmlStr = xmlStr.replace(re, "$1" + beautyNewVal + "$2");
+    
+    curcube.xml = xmlStr;
+
+    $("#"+beautyImageId).attr("src","/res/heart.png");
+
+    dataChanged = true;
+
+  }
+
 
   function _saveData() {
     if (dataChanged) {
