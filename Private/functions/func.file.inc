@@ -104,6 +104,9 @@ function storeFSData($details, $filename, $field) {
     case "email":
       file_put_contents($details->detail[1]->email, PHP_STR);
       break;
+    case "beauty":
+      file_put_contents($details->detail[2]->beauty, PHP_STR);
+      break;
     case "guid":
       file_put_contents($details->detail[2]->guid, PHP_STR);
       break;
