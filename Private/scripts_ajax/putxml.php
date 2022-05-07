@@ -53,6 +53,7 @@ if (!is_readable(APP_DATA_PATH . PHP_SLASH . $filename)) {
   mkdir(APP_DATA_PATH . PHP_SLASH . $filename. PHP_SLASH . "data". PHP_SLASH . "label");
   mkdir(APP_DATA_PATH . PHP_SLASH . $filename. PHP_SLASH . "data". PHP_SLASH . "link");
   mkdir(APP_DATA_PATH . PHP_SLASH . $filename. PHP_SLASH . "data". PHP_SLASH . "email");
+  mkdir(APP_DATA_PATH . PHP_SLASH . $filename. PHP_SLASH . "data". PHP_SLASH . "beauty");
   mkdir(APP_DATA_PATH . PHP_SLASH . $filename. PHP_SLASH . "data". PHP_SLASH . "guid");
   mkdir(APP_DATA_PATH . PHP_SLASH . $filename. PHP_SLASH . "data". PHP_SLASH . "password");
 }
@@ -75,6 +76,7 @@ storeFSData($details, $filename, "tags");
 storeFSData($details, $filename, "label");
 storeFSData($details, $filename, "link");
 storeFSData($details, $filename, "email");
+storeFSData($details, $filename, "beauty");
 storeFSData($details, $filename, "guid");
 storeFSData($details, $filename, "password");
 
