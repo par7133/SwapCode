@@ -146,9 +146,15 @@ function onDrop(tthis, e) {
     
     newCube = "";
     newCube += "<div class='link-div' title='" + newcube.desc + "' order='" + n + "' onclick='selCube(this);openDetail()' draggable='true' ondragstart='onDragStart(this, event);' onmouseover='onMouseOver();'>";
-    newCube += "<div class='link-title'>" + newcube.title + "</div>";
+    newCube += "<div class='link-title'>" + newcube.title + "<div style='width:25px; float:right;'><img class='imgheart' src='/res/unheart.png' style='height:23px;'></a></div></div>";
     newCube += "<a href='#'><img class='link-img' src='/res/code.png' alt='" + newcube.title + "'></a><br>";
+    newCube += " <br>";
     newCube += "&nbsp;<a class='link-link' href='http://" + newcube.link.replace(/~/g, "/") + "'>" + newcube.label.replace(/~/g, "/") + "</a><br>";
+    newCube += "<div style='position:relative;top:-25px;left:-2px;text-align:right;padding-right:1.5px;'>";
+    newCube += "<img src='/res/fb.png'>";
+    newCube += "<img src='/res/twitter.png'>";
+    newCube += "<img src='/res/whatsapp.png'>";
+    newCube += "</div>";
     newCube += "</div>";
     
     oldHtml = $(tthis).html();

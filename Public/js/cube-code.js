@@ -82,6 +82,7 @@ function myCube(myname, myformalName, myAPP_HOST) {
   this.name = myname;
   this.map = ["Address", "Contacts", "Other Info", "Menu", "Pictures", "Password"];
   this.formalName = myformalName;
+  this.beauty = "";
   this.guid = "";
   this.password = "";
   this.cats = "";
@@ -110,6 +111,7 @@ function myCube(myname, myformalName, myAPP_HOST) {
   this.gethcur = mygethcur;
   this.getvcur = mygetvcur;
   this.getname = mygetname;
+  this.getbeauty = mygetbeauty;
   this.getguid = mygetguid;
   this.getpassword = mygetpassword;
   this.getxml = mygetxml;
@@ -382,6 +384,15 @@ function myCube(myname, myformalName, myAPP_HOST) {
 
         myObj.xml = xml;
 
+        re = new RegExp("\<beauty\>(.*)\<\/beauty\>", "igsu");
+        a = re.exec(xml);
+        if (!a || a.length===0) {
+          document.write("Data access error (#1a)<br><br>");
+          return;
+        } else {
+          myObj.beauty = a[1];  
+        }  
+
         re = new RegExp("\<guid\>(.*)\<\/guid\>", "igsu");
         a = re.exec(xml);
         if (!a || a.length===0) {
@@ -458,6 +469,15 @@ function myCube(myname, myformalName, myAPP_HOST) {
     //  alert(offers[0].xml);
     //}  
   }
+
+  /*
+   * Get the beauty of the cube
+   * 
+   * @returns string
+   */
+  function mygetbeauty() {
+    return this.beauty;   
+  }  
 
   /*
    * Get the guid of the cube
