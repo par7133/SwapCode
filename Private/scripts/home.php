@@ -29,7 +29,7 @@
 use fivemode\fivemode\LinkUtil;
 
 
-define('PAGE_TITLE', "SnipSwap - Home");
+define('PAGE_TITLE', "Swap Snippet - Home");
 
 
 function echo_label(string $label) {
