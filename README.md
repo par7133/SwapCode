@@ -20,7 +20,7 @@ As you are going to run Swap Snippet in the PHP process context, using a limited
   <li>In Public/js/cube-code.js, in mystart class method, check if you are using 'http' or 'https'.</li>	   
 </ol>
      
-Hope you can enjoy it and let us know about any feedback: <a href="mailto:my25mb@aol.com" style="color:#e6d236;">my25mb@aol.com</a>   
+Hope you can enjoy it and let us know about any feedback: <a href="mailto:info@swapsnippet.com" style="color:#e6d236;">info@swapsnippet.com</a>   
 
 <b>Please note that version 2.0.5 > is incompatible with previous versions.</b>
 
