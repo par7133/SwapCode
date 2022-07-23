@@ -1,17 +1,17 @@
-# SnipSwap
+# Swap Snippet
 Swapping code like burgers? Here your p2p, drag-n-drop solution - GPL License
 
-Hello and welcome to SnipSwap!<br>
+Hello and welcome to Swap Snippet!<br>
 	   
-SnipSwap is a light, simple, "peer-to-peer" software for swapping snippets of code with others, by dran-n-drop.<br>
+Swap Snippet is a light, simple, "peer-to-peer" software for swapping snippets of code with others, by dran-n-drop.<br>
 	   
-SnipSwap is released under GPLv3 license, it is supplied AS-IS and we do not take any responsibility for its misusage.<br>
+Swap Snippet is released under GPLv3 license, it is supplied AS-IS and we do not take any responsibility for its misusage.<br>
 
-SnipSwap got built behind some cool features like object drag-n-drop between browser windows, full object serialization and xml.
+Swap Snippet got built behind some cool features like object drag-n-drop between browser windows, full object serialization and xml.
 
 First step, use the left side panel password field to create the hashed password to insert in the config file.<br>
 	   
-As you are going to run SnipSwap in the PHP process context, using a limited web server or phpfpm user, you must follow some simple directives for an optimal first setup:<br>
+As you are going to run Swap Snippet in the PHP process context, using a limited web server or phpfpm user, you must follow some simple directives for an optimal first setup:<br>
 
 <ol>
   <li>Check the write permissions of your "data" (repo) folder in your web app private path; and set its path in the config file.</li>
@@ -26,4 +26,4 @@ Hope you can enjoy it and let us know about any feedback: <a href="mailto:my25mb
 
 ###Screenshots:
 
-![SnipSwap in action](/Public/res/Screenshot1.jpg)<br>
+![Swap Snippet in action](/Public/res/Screenshot1.jpg)<br>
