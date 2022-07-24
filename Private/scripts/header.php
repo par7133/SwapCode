@@ -116,7 +116,7 @@ Page::clearJSBuffer();
   <body>
 
  <div id="HCsplash" style="padding-top: 40px; text-align:center;color:#d4b0dc;font-family:'Bungee Hairline';">
-    <div id="myh1" style="position:relative; top:80px;"><H1>SnipSwap</H1></div><br><br><br><br>
+    <div id="myh1" style="position:relative; top:80px;"><H1>Swap Snippet</H1></div><br><br><br><br>
     <img src="/res/code.png" style="width:310px;">
 </div>
 
