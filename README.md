@@ -22,7 +22,7 @@ As you are going to run Swap Snippet in the PHP process context, using a limited
      
 Hope you can enjoy it and let us know about any feedback: <a href="mailto:info@swapsnippet.com" style="color:#e6d236;">info@swapsnippet.com</a>   
 
-<b>Please note that version 2.0.5 > is incompatible with previous versions.</b>
+<b>Please note that version 2.0.5 > is not compatible with previous versions.</b>
 
 ###Screenshots:
 
