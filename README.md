@@ -4,7 +4,7 @@
 <h1>Swap Snippet</h1>
 Swapping code like burgers? Here your p2p, drag-n-drop solution - GPL License<br>
 <br>
-Hello and welcome to Swap Snippet!<br>  
+Hello and welcome to Swap Snippet!<br><br>  
 
 Swap Snippet is a light, simple, "peer-to-peer" software for swapping snippets of code with others, by dran-n-drop.<br>
 	   
