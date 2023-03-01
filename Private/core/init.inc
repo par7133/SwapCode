@@ -31,10 +31,6 @@ use fivemode\fivemode\Err;
 use fivemode\fivemode\Page;
 use fivemode\fivemode\Session;
 
-$ctrlName = strtolower(rtrim(substr(filter_input(INPUT_GET, "url", FILTER_SANITIZE_STRING), 0, 300), "/"));
-if ($ctrlName === "") {
-  $ctrlName = "home";
-}
 
 error_reporting(E_ALL & ~ (E_WARNING | E_NOTICE | E_STRICT | E_DEPRECATED));  
 ini_set('display_startup_errors',1);  
@@ -293,16 +289,15 @@ Err::setDefaultHandlers();
 
 // HEADERS
 
-if ($ctrlName === "search") {
+//if ($ctrlName === "search") {
   // Set public cache with 5 minutese expiration..
   //Page::setPublicCacheHeaders(300);
-  Page::setNoCacheHeaders();
+  //Page::setNoCacheHeaders();
   
-} else {
+//} else {
   // Disable the cache..
   Page::setNoCacheHeaders();
-
-}
+//}
 
 
 // SHUTDOWN 
