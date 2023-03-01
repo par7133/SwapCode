@@ -37,7 +37,9 @@ $scriptPath = APP_SCRIPT_PATH;
 
 // PARAMETERS VALIDATION
 
-$url = strtolower(rtrim(substr(filter_input(INPUT_GET, "url", FILTER_SANITIZE_STRING), 0, 300), "/"));
+$url = filter_input(INPUT_GET, "url")??"";
+$url = strip_tags($url);
+$url = strtolower(trim(substr($url, 0, 300), "/"));
 
 switch ($url) {
   case "footercontent":
@@ -59,34 +61,31 @@ switch ($url) {
     break;   
   default:
 
-    $platform = strtolower(substr(filter_input(INPUT_GET, "platform", FILTER_SANITIZE_STRING), 0, 1));
-    //$catPath = strtolower(rtrim(substr(filter_input(INPUT_GET, "cat", FILTER_SANITIZE_STRING), 0, 300), "/"));
-    $catPath = rtrim(substr(filter_input(INPUT_GET, "cat", FILTER_SANITIZE_STRING), 0, 300), "/");
+    $platform = filter_input(INPUT_GET, "platform")??"";
+    $platform = strip_tags($platform);
+    $platform = strtolower(substr($platform, 0, 1));
+    
+    $catPath = filter_input(INPUT_GET, "cat")??"";
+    $catPath = strip_tags($catPath);
+    $catPath = rtrim(substr($catPath, 0, 300), "/");
+    
     $catMaskedPath = str_replace(PHP_SLASH, PHP_TILDE, $catPath);
     
-    //if (($platform!=="d") && ($platform!=="m")) {
-    //  $scriptPath = APP_ERROR_PATH;
-    //  define("SCRIPT_NAME", "err-404");
-    //  define("SCRIPT_FILENAME", "err-404.php");  
-    //} else {  
-
-      if (CatUtil::catExist($catMaskedPath)) {
-        define("SCRIPT_NAME", "home");
-        define("SCRIPT_FILENAME", "home.php");   
-      } else {
-        // In any other case, the category has no match..
-        /*
-         * $scriptPath = APP_ERROR_PATH;
-        define("SCRIPT_NAME", "err-404");
-        define("SCRIPT_FILENAME", "err-404.php");
-         * 
-         */
-        $catMaskedPath = PHP_STR;
-        define("SCRIPT_NAME", "home");
-        define("SCRIPT_FILENAME", "home.php"); 
-      }
-
-    //}
+    if (CatUtil::catExist($catMaskedPath)) {
+      define("SCRIPT_NAME", "home");
+      define("SCRIPT_FILENAME", "home.php");   
+    } else {
+      // In any other case, the category has no match..
+      /*
+       * $scriptPath = APP_ERROR_PATH;
+      define("SCRIPT_NAME", "err-404");
+      define("SCRIPT_FILENAME", "err-404.php");
+       * 
+       */
+      $catMaskedPath = PHP_STR;
+      define("SCRIPT_NAME", "home");
+      define("SCRIPT_FILENAME", "home.php"); 
+    }
 }
 
 if (SCRIPT_NAME==="err-404") {
