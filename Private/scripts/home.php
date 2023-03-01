@@ -29,7 +29,7 @@
 use fivemode\fivemode\LinkUtil;
 
 
-define('PAGE_TITLE', "Swap Snippet - Home");
+define('PAGE_TITLE', "SwapSnippet - Home");
 
 
 function echo_label(string $label) {
@@ -40,8 +40,10 @@ function echo_label(string $label) {
   }
 }
 
-$q = (string)substr((string)filter_input1(INPUT_GET, "q", FILTER_SANITIZE_QM), 0, 100);
-$splash = filter_input(INPUT_GET, "splash");
+$q = substr(filter_input1(INPUT_GET, "q", FILTER_SANITIZE_QM)??"", 0, 100);
+
+$splash = filter_input(INPUT_GET, "splash")??"";
+$splash = strip_tags($splash);
 
 $curLocale = APP_LOCALE;
 

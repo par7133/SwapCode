@@ -3,7 +3,7 @@
 /**
  * Copyright 2021, 2024 5 Mode
  *
- * This file is part of SnipSwap.
+ * This file is part of MacSwap.
  *
  * SnipSwap is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -35,9 +35,15 @@ settype($q, "string");
 
 // PARAMETERS VALIDATION AND NORMALIZATION
 
-$q = (string)substr((string)filter_input1(INPUT_GET, "q", FILTER_SANITIZE_QM), 0, 100);
-$catMaskedPath = (string)substr((string)filter_input(INPUT_GET, "catMaskedPath", FILTER_SANITIZE_STRING), 0, 100);
-$platform = (string)substr((string)filter_input(INPUT_GET, "platform", FILTER_SANITIZE_STRING), 0, 1);
+$q = substr(filter_input1(INPUT_GET, "q", FILTER_SANITIZE_QM)??"", 0, 100);
+
+$catMaskedPath = filter_input(INPUT_GET, "catMaskedPath")??"";
+$catMaskedPath = strip_tags($catMaskedPath);
+$catMaskedPath = substr($catMaskedPath, 0, 100);
+
+$platform = filter_input(INPUT_GET, "platform")??"";
+$platform = strip_tags($platform);
+$platform = substr($platform, 0, 1);
 
 $styleTag = PHP_STR;
 
@@ -146,7 +152,7 @@ $aCats2 = CatUtil::getSubCatsList($cat1);
 
   <?php 
 
-      $GET_SCRIPT_NAME = basename(filter_input(INPUT_GET, "SCRIPT_NAME"));
+      $GET_SCRIPT_NAME = basename(strip_tags(filter_input(INPUT_GET, "SCRIPT_NAME")??""));
 
       if (stripos(APP_SCRIPTS_WITHOUT_SEARCH_MENU, "|". $GET_SCRIPT_NAME . "|") || (mb_strrchr($GET_SCRIPT_NAME, PHP_UNDERSCORE, false) === "_a")) { 
   ?>

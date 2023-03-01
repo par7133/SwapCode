@@ -31,7 +31,7 @@ header("Content-type: text/xml");
 //
 // PARAMETER VALIDATION
 //
-$filename = filter_input(INPUT_GET, "f");
+$filename = strip_tags(filter_input(INPUT_GET, "f")??"");
 $filename2 = $filename . ".xml";
 
 //if (preg_match("/snip\d\d\d/", $filename)) {
