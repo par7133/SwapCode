@@ -34,11 +34,13 @@
 //
 // PARAMETER VALIDATION
 //
-$filename = filter_input(INPUT_POST, "f");
+$filename = filter_input(INPUT_POST, "f")??"";
+$filename = strip_tags($filename);
+
 $filename2 = $filename . ".xml";
 
-$xmlStr = filter_input(INPUT_POST, "xml");
-
+$xmlStr = filter_input(INPUT_POST, "xml")??"";
+$xmlStr = strip_tags($xmlStr);
 
 // if the snip data folder doesn'exist I create it
 // with all the subfolders..
