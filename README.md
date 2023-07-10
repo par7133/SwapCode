@@ -21,12 +21,12 @@ As you are going to run Swap Code in the PHP process context, using a limited we
   <li>Set the default Business Label, Link and Email of the stuff your are going to swap.</li>
   <li>Set the MAX_DFT_NEW_SNIP value stating the max number of snippet the app is going to initially create.</li>
   <li>In Public/js/cube-code.js, in mystart class method, check if you are using 'http' or 'https'.</li>	   
-</ol>
-     
-Hope you can enjoy it and let us know about any feedback: <a href="mailto:posta@elettronica.lol" style="color:#e6d236;">posta@elettronica.lol</a>   
+</ol>   
 
 <b>Please note that version 2.0.5 > is not compatible with previous versions.</b>
 
 ###Screenshots:
 
 ![Swap Code in action](/Public/res/Screenshot1.jpg)<br>
+
+Feedback: <a href="mailto:posta@elettronica.lol" style="color:#e6d236;">posta@elettronica.lol</a>
