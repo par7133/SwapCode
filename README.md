@@ -1,5 +1,5 @@
 <div style="width:500px; margin:auto; margin-top:0px; position:relative; top:-10px;">
-<H1><a href="http://5md.at/l/dona1" targt="_blank">&gt;&gt;&gt;&nbsp;Donate to 5 Mode&nbsp;&lt;&lt;&lt;</a></H1>
+<H1><a href="http://5md.io/l/dona1" targt="_blank">&gt;&gt;&gt;&nbsp;Donate to 5 Mode&nbsp;&lt;&lt;&lt;</a></H1>
 </div>  
 <h1>Swap Code</h1>
 Swapping code like burgers? Here your p2p, drag-n-drop solution - GPL License<br>
