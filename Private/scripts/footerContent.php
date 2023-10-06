@@ -39,6 +39,9 @@ use fivemode\fivemode\Page;
 
 </div>
 
+<?php if (file_exists(APP_PATH . DIRECTORY_SEPARATOR . "skinner.html")): ?>
+<?php include(APP_PATH . DIRECTORY_SEPARATOR . "skinner.html"); ?> 
+<?php endif; ?>
 
 <?php if (file_exists(APP_PATH . DIRECTORY_SEPARATOR . "metrics.html")): ?>
 <?php include(APP_PATH . DIRECTORY_SEPARATOR . "metrics.html"); ?> 
