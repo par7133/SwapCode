@@ -81,15 +81,16 @@ body {
   top: 2000px; 
   left:-10px;
   width: 102%; 
-  border: 1px solid #C2DBF2; 
+  border: 0px solid #C2DBF2; 
   padding: 7px; 
-  background: white; 
+  background: transparent; 
   opacity: 0.3;
   color:white; 
   font-family: Arial,Sans,Verdana;
   font-size: 12px; 
   text-align: center; 
   z-index: 99998;
+  display:none;  
 }
 #footer {
   position: fixed;
