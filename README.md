@@ -1,5 +1,5 @@
 <div style="width:500px; margin:auto; margin-top:0px; position:relative; top:-10px;">
-<H1><a href="http://gaox.io/l/dona1" targt="_blank">&gt;&gt;&gt;&nbsp;Donate to 5 Mode&nbsp;&lt;&lt;&lt;</a></H1>
+<H1><a href="http://gaox.io/l/dona1" targt="_blank">&gt;&gt;&gt;&nbsp;Donate to Dan&nbsp;&lt;&lt;&lt;</a></H1>
 </div>  
 <h1>Swap Code</h1>
 Swapping code like burgers? Here your p2p, drag-n-drop solution - GPL License<br>
@@ -29,4 +29,4 @@ As you are going to run Swap Code in the PHP process context, using a limited we
 
 ![Swap Code in action](/Public/res/Screenshot1.jpg)<br>
 
-Feedback: <a href="mailto:posta@elettronica.lol" style="color:#e6d236;">posta@elettronica.lol</a>
+Feedback: <a href="mailto:code@gaox.io" style="color:#e6d236;">code@gaox.io</a>
