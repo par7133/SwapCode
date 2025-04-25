@@ -1,6 +1,3 @@
-<div style="width:500px; margin:auto; margin-top:0px; position:relative; top:-10px;">
-<H1><a href="http://gaox.io/l/dona1" targt="_blank">&gt;&gt;&gt;&nbsp;Donate to Dan&nbsp;&lt;&lt;&lt;</a></H1>
-</div>  
 <h1>Swap Code</h1>
 Swapping code like burgers? Here your p2p, drag-n-drop solution - GPL License<br>
 <br>
@@ -24,6 +21,10 @@ As you are going to run Swap Code in the PHP process context, using a limited we
 </ol>   
 
 <b>Please note that version 2.0.5 > is not compatible with previous versions.</b>
+
+For any need of software additions, plugins and improvements please write to <a href="mailto:info@5mode.com">info@5mode.com</a>  
+
+To help please donate by clicking <a href="https://gaox.io/l/dona1">https://gaox.io/l/dona1</a> and filling the form.  
 
 ###Screenshots:
 
