@@ -35,7 +35,7 @@ define('TESTING', false);
 //define('CACHE_APP_PREFIX', "SS_tosqefv0ct_");
 
 define('APP_NAME', "SwapCode");
-define('APP_HOST', "yourname-swapcode.com");
+define('APP_HOST', "yoursitename.xyz");
 define('APP_PATH', "/var/www/YourWebApp/Public");
 define('APP_SCRIPT_PATH', "/var/www/YourWebApp/Private/scripts");
 define('APP_AJAX_PATH', "/var/www/YourWebApp/Private/scripts_ajax");
@@ -98,7 +98,7 @@ $CONFIG = [
 
   'APP' => [
       'NAME' => "SwapCode",
-      'HOST' => "youname-swapcode.com",
+      'HOST' => "yoursitename.xyz",
       'PATH' => "/var/www/YourWebApp/Public",
       'SCRIPT_PATH' => "/var/www/YourWebApp/Private/scripts",
       'AJAX_PATH' => "/var/www/YourWebApp/Private/scripts_ajax",
