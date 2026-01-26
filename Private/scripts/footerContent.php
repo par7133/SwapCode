@@ -35,7 +35,7 @@ use fivemode\fivemode\Page;
 ?>  
 
 <div id="footerCont">&nbsp;</div>
-<div id="footer"><span style="background:#FFFFFF;opacity:0.7;">&nbsp;&nbsp;A <a id="linkOpenGallery" href="http://5mode.com">5 Mode</a> project and <a href="http://demo.5mode.com">WYSIWYG</a> system. Some rights reserved.</span></div>
+<div id="footer"><span style="background:#FFFFFF;opacity:0.7;">&nbsp;&nbsp;A <a id="linkOpenGallery" href="http://numode.eu">NuMode</a> project and <a href="http://demo.numode.eu">WYSIWYG</a> system. Some rights reserved.</span></div>
 
 </div>
 
