@@ -24,7 +24,7 @@ As you are going to run Swap Code in the PHP process context, using a limited we
 
 For any need of software additions, plugins and improvements please write to <a href="mailto:info@numode.eu">info@numode.eu</a>  
 
-To help please donate by clicking <a href="https://gaox.eu/l/dona1">https://gaox.eu/l/dona1</a> and filling the form.  
+To help please donate by clicking <a href="https://gaox.io/l/dona1">https://gaox.io/l/dona1</a> and filling the form.  
 
 ###Screenshots:
 
